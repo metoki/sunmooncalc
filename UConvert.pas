@@ -35,18 +35,8 @@ var
     hour,minutes,second:string;
     tmp : double;
     idx1,idx2,idx3,sign : integer;
-    regEx:TRegEx;
-    isMatch:boolean;
     ans:TAngle;
 begin
-     // マイナスを含む時刻指定形式を検証
-     isMatch := TRegEx.IsMatch(value,'^-?\d{1,2}h\d{1,2}m\d{1,2}s$',[roIgnoreCase]);
-     if isMatch = false  then
-     begin
-      result := nil;
-      exit;
-     end;
-
     ans := TAngle.Create;
     ans.RightAscension := value;
 

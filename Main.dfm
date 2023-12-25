@@ -3,8 +3,8 @@ object Form1: TForm1
   Top = 0
   Action = FileExit1
   Caption = #22825#20307#20301#32622#35336#31639
-  ClientHeight = 1101
-  ClientWidth = 1301
+  ClientHeight = 1084
+  ClientWidth = 1295
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,43 +15,33 @@ object Form1: TForm1
   TextHeight = 32
   object EdgeBrowser1: TEdgeBrowser
     Left = 0
-    Top = 498
-    Width = 1301
-    Height = 573
+    Top = 738
+    Width = 1295
+    Height = 316
     Align = alClient
     TabOrder = 0
     AllowSingleSignOnUsingOSPrimaryAccount = False
     TargetCompatibleBrowserVersion = '117.0.2045.28'
     UserDataFolder = '%LOCALAPPDATA%\bds.exe.WebView2'
-    ExplicitTop = 280
-    ExplicitWidth = 1112
-    ExplicitHeight = 530
+    ExplicitTop = 776
+    ExplicitHeight = 278
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 1071
-    Width = 1301
+    Top = 1054
+    Width = 1295
     Height = 30
     Panels = <>
-    ExplicitTop = 810
-    ExplicitWidth = 1112
   end
   object GroupBox1: TGroupBox
     Left = 0
     Top = 0
-    Width = 1301
+    Width = 1295
     Height = 393
     Align = alTop
     TabOrder = 2
-    ExplicitTop = 32
-    object SpeedButton1: TSpeedButton
-      Left = 334
-      Top = 336
-      Width = 113
-      Height = 33
-      Caption = 'URL'
-      OnClick = SpeedButton1Click
-    end
+    ExplicitLeft = 8
+    ExplicitTop = -6
     object Label7: TLabel
       Left = 334
       Top = 34
@@ -69,30 +59,86 @@ object Form1: TForm1
     object Label2: TLabel
       Left = 742
       Top = 34
-      Width = 158
+      Width = 177
       Height = 32
-      Caption = #32076#24230':longitude'
+      Caption = #32076#24230' : Longitude'
     end
     object Label3: TLabel
       Left = 742
       Top = 90
-      Width = 136
+      Width = 155
       Height = 32
-      Caption = #32239#24230':latitude'
+      Caption = #32239#24230' : Latitude'
     end
     object Label12: TLabel
-      Left = 742
-      Top = 177
+      Left = 413
+      Top = 136
       Width = 50
       Height = 32
       Caption = #36196#32076
     end
     object Label13: TLabel
-      Left = 742
-      Top = 239
+      Left = 413
+      Top = 214
       Width = 50
       Height = 32
       Caption = #36196#32239
+    end
+    object Label4: TLabel
+      Left = 469
+      Top = 177
+      Width = 14
+      Height = 32
+      Caption = 'h'
+    end
+    object Label5: TLabel
+      Left = 541
+      Top = 177
+      Width = 21
+      Height = 32
+      Caption = 'm'
+    end
+    object Label6: TLabel
+      Left = 669
+      Top = 177
+      Width = 10
+      Height = 32
+      Caption = 's'
+    end
+    object Label9: TLabel
+      Left = 469
+      Top = 255
+      Width = 9
+      Height = 32
+      Caption = #176
+    end
+    object Label10: TLabel
+      Left = 541
+      Top = 255
+      Width = 21
+      Height = 32
+      Caption = #8242
+    end
+    object Label11: TLabel
+      Left = 669
+      Top = 255
+      Width = 9
+      Height = 32
+      Caption = #8243
+    end
+    object Label14: TLabel
+      Left = 717
+      Top = 136
+      Width = 15
+      Height = 32
+      Caption = #945
+    end
+    object Label15: TLabel
+      Left = 718
+      Top = 220
+      Width = 14
+      Height = 32
+      Caption = #948
     end
     object CalendarView1: TCalendarView
       Left = 16
@@ -161,59 +207,154 @@ object Form1: TForm1
       TabOrder = 4
       Text = '35.7362716'
     end
-    object EditRightAscension: TEdit
-      Left = 813
+    object EditDegreeAlpha: TEdit
+      Left = 718
       Top = 174
-      Width = 196
+      Width = 153
       Height = 40
       Alignment = taRightJustify
       TabOrder = 5
-      Text = '12h30m30s'
-    end
-    object EditDegreeAlpha: TEdit
-      Left = 1031
-      Top = 174
-      Width = 218
-      Height = 40
-      Alignment = taRightJustify
-      TabOrder = 6
-      Text = 'EditDegreeAlpha'
+      Text = '0'
     end
     object EditDeclination: TEdit
-      Left = 813
-      Top = 239
+      Left = 1029
+      Top = 371
       Width = 196
       Height = 40
       Alignment = taRightJustify
-      TabOrder = 7
+      TabOrder = 6
       Text = '23'#176' 30'#8242' 20'#8243
     end
     object EditDegreeDelta: TEdit
-      Left = 1027
-      Top = 236
-      Width = 234
+      Left = 718
+      Top = 252
+      Width = 153
       Height = 40
       Alignment = taRightJustify
+      TabOrder = 7
+      Text = '0'
+    end
+    object Button1: TButton
+      Left = 358
+      Top = 305
+      Width = 89
+      Height = 36
+      Caption = 'Debug'
       TabOrder = 8
-      Text = 'EditDegreeDelta'
+      OnClick = Button1Click
+    end
+    object EditDebug: TEdit
+      Left = 358
+      Top = 347
+      Width = 377
+      Height = 40
+      TabOrder = 9
+      Text = 'EditDebug'
+    end
+    object EditHour: TEdit
+      Left = 416
+      Top = 174
+      Width = 43
+      Height = 40
+      Alignment = taRightJustify
+      TabOrder = 10
+      Text = '0'
+    end
+    object EditSecond: TEdit
+      Left = 568
+      Top = 174
+      Width = 95
+      Height = 40
+      Alignment = taRightJustify
+      TabOrder = 12
+      Text = '0'
+    end
+    object EditMinutes: TEdit
+      Left = 489
+      Top = 174
+      Width = 46
+      Height = 40
+      Alignment = taRightJustify
+      TabOrder = 11
+      Text = '0'
+    end
+    object EditDeg: TEdit
+      Left = 420
+      Top = 252
+      Width = 43
+      Height = 40
+      Alignment = taRightJustify
+      TabOrder = 13
+      Text = '0'
+    end
+    object EditMinu: TEdit
+      Left = 489
+      Top = 252
+      Width = 46
+      Height = 40
+      Alignment = taRightJustify
+      TabOrder = 14
+      Text = '0'
+    end
+    object EditSec: TEdit
+      Left = 568
+      Top = 252
+      Width = 95
+      Height = 40
+      Alignment = taRightJustify
+      TabOrder = 15
+      Text = '0'
+    end
+    object GroupBox3: TGroupBox
+      Left = 904
+      Top = 136
+      Width = 257
+      Height = 169
+      Caption = 'Radian'
+      TabOrder = 16
+      object EditAlphaRad: TEdit
+        Left = 16
+        Top = 40
+        Width = 201
+        Height = 40
+        Alignment = taRightJustify
+        TabOrder = 0
+        Text = '0'
+      end
+      object EditDeltaRad: TEdit
+        Left = 17
+        Top = 110
+        Width = 200
+        Height = 40
+        Alignment = taRightJustify
+        TabOrder = 1
+        Text = '0'
+      end
     end
   end
   object GroupBox2: TGroupBox
     Left = 0
-    Top = 393
-    Width = 1301
+    Top = 633
+    Width = 1295
     Height = 105
     Align = alTop
     TabOrder = 3
     ExplicitLeft = 8
-    ExplicitTop = 430
-    ExplicitWidth = 185
+    ExplicitTop = 641
     object Label1: TLabel
-      Left = 1192
-      Top = 56
+      Left = 288
+      Top = 13
       Width = 69
       Height = 32
       Caption = 'Label1'
+    end
+    object SpeedButton1: TSpeedButton
+      Left = 146
+      Top = 12
+      Width = 113
+      Height = 33
+      Caption = 'URL'
+      OnClick = SpeedButton1Click
     end
     object MapURL: TLabeledEdit
       Left = 16
@@ -236,9 +377,7 @@ object Form1: TForm1
       Font.Style = []
       ParentFont = False
       TabOrder = 0
-      Text = 
-        'https://www.google.com/maps/@35.7284318,139.6305656,15.75z?entry' +
-        '=ttu'
+      Text = 'https://www.google.com/maps/@35.7284318,139.6305656,5z?entry=ttu'
     end
     object ButtonURL: TButton
       Left = 935
@@ -255,6 +394,23 @@ object Form1: TForm1
       TabOrder = 1
       OnClick = ButtonURLClick
     end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 393
+    Width = 1295
+    Height = 112
+    Align = alTop
+    TabOrder = 4
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 505
+    Width = 1295
+    Height = 128
+    Align = alTop
+    TabOrder = 5
+    ExplicitTop = 489
   end
   object MainMenu1: TMainMenu
     Left = 200

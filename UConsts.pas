@@ -3,6 +3,7 @@ unit UConsts;
 interface
   const
    {*
+
    座標系が恒星に対して固定し、見かけ上は日周運動と一緒に動いていく座標系
    赤経と赤緯で天球上のい位置を示す
    赤道座標系(equatorial coordinates system)
@@ -28,6 +29,7 @@ interface
     1m = 15′   1′ = 4s
     1s = 15″   1″ =(1/15)s
 
+    赤経はα   赤緯はδ で表現される
 
    *}
 
